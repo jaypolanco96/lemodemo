@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, { useEffect } from "react";
 import Test from "./pages/test";
 import { Helmet } from "react-helmet";
 import Home from "./pages/index";
@@ -7,25 +7,38 @@ import "./App.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 function App() {
-  if (typeof window.ethereum !== 'undefined') {
-    console.log('MetaMask is installed!');
+  if (typeof window.ethereum !== "undefined") {
+    console.log("MetaMask is installed!");
   }
-  
-useEffect(() => {
-  const ethereumButton = document.querySelector('.enableEthereumButton');
-  const showAccount = document.querySelector('.showAccount');
-  
-  ethereumButton.addEventListener('click', () => {
-    getAccount();
-  });
-  
-  async function getAccount() {
-    const ethereum = window.ethereum;
-    const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
-    const account = accounts[0];
-    ethereumButton.innerHTML = account[0] + account[1] + account[2] + account[3] + account[4] + account[5] + '...' + account[39] + account[40] + account[41];
-  }
-}, [])
+
+  useEffect(() => {
+    const ethereumButton = document.querySelector(".enableEthereumButton");
+    const walletnumber = document.getElementById("walletnumber");
+
+    ethereumButton.addEventListener("click", () => {
+      getAccount();
+    });
+
+    async function getAccount() {
+      const ethereum = window.ethereum;
+      const accounts = await ethereum.request({
+        method: "eth_requestAccounts",
+      });
+      const account = accounts[0];
+      walletnumber.innerHTML =
+        account[0] +
+        account[1] +
+        account[2] +
+        account[3] +
+        account[4] +
+        account[5] +
+        "..." +
+        account[38] +
+        account[39] +
+        account[40] +
+        account[41];
+    }
+  }, []);
   return (
     <Router>
       <Helmet>
@@ -50,7 +63,7 @@ useEffect(() => {
           </Link>
           <Link to="/">
             <button id="unlockbutton" className="enableEthereumButton">
-              <h3>Unlock Wallet</h3>
+              <h3 id="walletnumber">Unlock Wallet</h3>
             </button>
           </Link>
         </div>
