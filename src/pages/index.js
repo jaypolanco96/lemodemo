@@ -66,13 +66,14 @@ function Home() {
         .cards {
           display: flex;
           justify-content: center;
+          align-items: center;
           flex-direction: row;
         }
         .card {
           display: flex;
           justify-content: center;
           flex-direction: column;
-          width: 25%;
+          width: 250px;
           height: 110px;
           margin: 10px;
           text-align: center;
@@ -85,7 +86,11 @@ function Home() {
           }
 
           .card {
-            width: 95%;
+            display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+            width: 450px;
           }
         }
       `}</style>
