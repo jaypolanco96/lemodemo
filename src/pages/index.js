@@ -71,7 +71,7 @@ function Home() {
           display: flex;
           justify-content: center;
           flex-direction: column;
-          width: 375px;
+          width: 25%;
           height: 110px;
           margin: 10px;
           text-align: center;

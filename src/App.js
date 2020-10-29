@@ -1,19 +1,39 @@
 import React from "react";
-import Test from './pages/test'
-import Home from './pages/index'
-import favicon from './favicon.png'
+import Test from "./pages/test";
+import { Helmet } from "react-helmet";
+import Home from "./pages/index";
+import favicon from "./favicon.png";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 function App() {
   return (
     <Router>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <meta name="theme-color" content="#000"></meta>
+        <meta name="msapplication-navbutton-color" content="#000"></meta>
+        <meta
+          name="apple-mobile-web-app-status-bar-style"
+          content="#000"
+        ></meta>
+      </Helmet>
       <div className="App">
         <div className="nav">
-          <Link to="/"><img src={favicon} alt="favicon"></img></Link>
-          <Link to="/"><h3 id="home">Home</h3></Link>
-          <Link to="/test"><h3>About</h3></Link>
-          <Link to="/test"><button><h3>Unlock Wallet</h3></button></Link>
+          <Link to="/">
+            <img src={favicon} alt="favicon"></img>
+          </Link>
+          <Link to="/">
+            <h3 id="home">Home</h3>
+          </Link>
+          <Link to="/test">
+            <h3>About</h3>
+          </Link>
+          <Link to="/test">
+            <button>
+              <h3>Unlock Wallet</h3>
+            </button>
+          </Link>
         </div>
         <Switch>
           <Route exact path="/">
