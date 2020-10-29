@@ -16,6 +16,10 @@ function Home() {
         <div className="card">
           <h2>Rebase in 12:16</h2>
         </div>
+        <div className="card">
+          <h2>Your LEMO Balance</h2>
+          <h3>1,000,000,000</h3>
+        </div>
       </div>
       <style jsx>{`
         .container {
@@ -39,6 +43,7 @@ function Home() {
           justify-content: center;
         }
         .headingtitle {
+          margin-bottom: 30px;
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -60,16 +65,27 @@ function Home() {
         .cards {
           display: flex;
           justify-content: center;
+          flex-direction: row;
         }
         .card {
           display: flex;
           justify-content: center;
-          width: 300px;
+          flex-direction: column;
+          width: 375px;
+          height: 110px;
           margin: 10px;
           text-align: center;
           border: 1px solid #4b4b4b;
           border-radius: 12px;
-          box-shadow: rgb(247, 244, 242) 1px 1px 0px inset;
+        }
+        @media only screen and (max-width: 800px) {
+          .cards {
+            flex-direction: column;
+          }
+
+           .card {
+               width: 95%;
+           }
         }
       `}</style>
     </div>
