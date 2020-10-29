@@ -14,7 +14,7 @@ function App() {
   useEffect(() => {
     const ethereumButton = document.querySelector(".enableEthereumButton");
     const walletnumber = document.getElementById("walletnumber");
-
+    getAccount();
     ethereumButton.addEventListener("click", () => {
       getAccount();
     });
