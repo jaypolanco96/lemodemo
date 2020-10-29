@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
 img {
   height: 50px;
 }
@@ -7,6 +9,7 @@ img {
   flex-direction: row;
   justify-content: space-between;
   box-shadow: 7px 1px 10px #000;
+  margin-bottom: 40px;
 }
 
 a {
