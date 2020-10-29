@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import Test from "./pages/test";
+import About from "./pages/About";
 import { Helmet } from "react-helmet";
 import Home from "./pages/index";
 import favicon from "./favicon.png";
@@ -7,14 +7,14 @@ import "./App.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 function App() {
-  if (typeof window.ethereum !== "undefined") {
-    console.log("MetaMask is installed!");
-  }
-
   useEffect(() => {
+    if (typeof window.ethereum !== "undefined") {
+      console.log("MetaMask is installed!");
+      getAccount();
+    }
     const ethereumButton = document.querySelector(".enableEthereumButton");
     const walletnumber = document.getElementById("walletnumber");
-    getAccount();
+
     ethereumButton.addEventListener("click", () => {
       getAccount();
     });
@@ -58,7 +58,7 @@ function App() {
           <Link to="/">
             <h3 id="home">Home</h3>
           </Link>
-          <Link to="/test">
+          <Link to="/about">
             <h3>About</h3>
           </Link>
           <Link to="/">
@@ -71,11 +71,8 @@ function App() {
           <Route exact path="/">
             <Home />
           </Route>
-          <Route exact path="/test">
-            <Test />
-          </Route>
-          <Route path="/test">
-            <Test />
+          <Route exact path="/about">
+            <About />
           </Route>
         </Switch>
       </div>

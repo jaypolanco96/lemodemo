@@ -26,9 +26,8 @@ function Home() {
         .container {
           display: flex;
           flex-direction: column;
-          width: 98%;
+          width: 100%;
           justify-content: center;
-          margin: 10px;
           border-radius: 15px;
         }
         .title {
@@ -40,6 +39,7 @@ function Home() {
           padding: 0px;
         }
         .heading {
+            margin: 0px;
           display: flex;
           justify-content: center;
         }
@@ -73,7 +73,7 @@ function Home() {
           display: flex;
           justify-content: center;
           flex-direction: column;
-          width: 250px;
+          width: 400px;
           height: 110px;
           margin: 10px;
           text-align: center;
@@ -86,11 +86,12 @@ function Home() {
           }
 
           .card {
+            margin: 10px 0px 10px 20px;
             display: flex;
           justify-content: center;
           align-items: center;
           flex-direction: column;
-            width: 450px;
+            width: 80%;
           }
         }
       `}</style>
