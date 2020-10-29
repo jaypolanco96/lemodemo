@@ -1,7 +1,8 @@
-import React from "react";
+import React, {  } from "react";
 import favicon from "../favicon.png";
 function Home() {
   return (
+      
     <div className="container">
       <div className="heading">
         <img id="headingimg" src={favicon} alt="favicon"></img>
@@ -83,9 +84,9 @@ function Home() {
             flex-direction: column;
           }
 
-           .card {
-               width: 95%;
-           }
+          .card {
+            width: 95%;
+          }
         }
       `}</style>
     </div>
