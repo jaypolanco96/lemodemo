@@ -12,6 +12,11 @@ function Home() {
           Stake LemonSwap LP tokens to claim your very own $GUAVA
         </h3>
       </div>
+      <div className="cards">
+        <div className="card">
+          <h2>Rebase in 12:16</h2>
+        </div>
+      </div>
       <style jsx>{`
         .container {
           display: flex;
@@ -23,7 +28,6 @@ function Home() {
         }
         .title {
           font-family: "Kaushan Script", sans-serif;
-          color: rgb(91, 57, 38);
           font-size: 36px;
           text-align: center;
           font-weight: 700;
@@ -41,17 +45,31 @@ function Home() {
           justify-content: center;
         }
         .description {
-            color: rgb(170, 149, 133);
-    font-size: 18px;
-    font-weight: 400;
-    margin: 0px;
-    padding: 0px;
-    text-align: center; 
+          color: #4b4b4b;
+          font-size: 18px;
+          font-weight: 400;
+          margin: 0px;
+          padding: 0px;
+          text-align: center;
         }
 
         #headingimg {
           display: flex;
           height: 130px;
+        }
+        .cards {
+          display: flex;
+          justify-content: center;
+        }
+        .card {
+          display: flex;
+          justify-content: center;
+          width: 300px;
+          margin: 10px;
+          text-align: center;
+          border: 1px solid #4b4b4b;
+          border-radius: 12px;
+          box-shadow: rgb(247, 244, 242) 1px 1px 0px inset;
         }
       `}</style>
     </div>

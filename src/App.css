@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
 
 img {
   height: 50px;
@@ -13,13 +13,21 @@ img {
 }
 
 a {
-  margin: 10px;
   color: #000;
+  margin: 10px;
   text-decoration: none;
 }
 button {
+  color: #000;
   cursor: pointer;
   border-radius: 15px;
   border-style: none;
   box-shadow: 0px 1px 10px #000;
+}
+
+button:hover {
+  color: #4b4b4b;
+}
+button:hover {
+  color: #4b4b4b;
 }
